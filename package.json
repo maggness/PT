@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Project Tech Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "Echo swag",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maggness/PT.git"
+  },
+  "author": "Tim de Roller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maggness/PT/issues"
+  },
+  "homepage": "https://github.com/maggness/PT#readme",
+  "dependencies": {
+    "camelcase": "^6.2.0",
+    "meme": "^0.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
