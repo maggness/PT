@@ -21,3 +21,6 @@ res.send('test swag')
 app.listen(port, () => {
     console.log("Server opgestart at http://localhost:")
 })
+
+app.use(function(req, res, next){
+  res.status(404);
