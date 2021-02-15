@@ -2,10 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Project Tech Backend",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "Echo swag",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,8 @@
   "homepage": "https://github.com/maggness/PT#readme",
   "dependencies": {
     "camelcase": "^6.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "meme": "^0.1.2"
   },
   "devDependencies": {
