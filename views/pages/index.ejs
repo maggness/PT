@@ -11,9 +11,21 @@
 
 <main>
     <div class="jumbotron">
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>
-    </div>
+        <h1>Profile</h1>
+        <p>Kies het spel wat jij bij je account wilt toevoegen</p>
+
+        <form method='GET' action="/">
+          <label for="spel">Kies je spel</label>
+          <select id="spel" name="spel">
+            <% games.forEach(function(games) { %>
+            <option title=<%= games.genre %> value=<%= games.name %>><%= games.name %></option>
+            <% }); %>
+          </select>
+
+          <input type="submit">
+        </form>
+
+      </div>
 </main>
 
 <footer>
