@@ -1,3 +1,64 @@
 body {
   background: white;
 }
+
+/* Header */
+
+.navigatieHeader {
+  background-color: #4CAF50;
+  position: fixed;
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navigatieHeader li {
+  list-style: none;
+}
+
+.navigatieHeader li button {
+  height: 6vh;
+  width: 10vw;
+  padding: 0;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+}
+
+.zoekIcon {
+  width: 6vw;
+  height: auto;
+}
+
+/* Footer */
+
+.navigatieFooter {
+  background-color: #4CAF50;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navigatieFooter li {
+  list-style: none;
+}
+
+.navigatieFooter li button {
+  height: 6vh;
+  width: 33.33vw;
+  padding: 0;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+}
