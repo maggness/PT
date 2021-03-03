@@ -10,22 +10,18 @@
 </header>
 
 <main>
-    <div class="jumbotron">
-        <h1>Profile</h1>
-        <p>Kies het spel wat jij bij je account wilt toevoegen</p>
+  <section>
 
-        <!-- <form method='GET' action="/">
-          <label for="spel">Kies je spel</label>
-          <select id="spel" name="spel">
-            <% games.forEach(function(games) { %>
-            <option title=<%= games.genre %> value=<%= games.name %>><%= games.name %></option>
-            <% }); %>
-          </select>
+    <h1>Welcome!</h1>
+      <form action="/genre" method="POST">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="genre" name="genre">
+        <button type="submit">Submit</button>
+      </form>
 
-          <input type="submit">
-        </form> -->
+      <%= Genre[i].name %>
 
-      </div>
+  </section>
 </main>
 
 <footer>
