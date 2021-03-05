@@ -1,11 +1,17 @@
-body {
-  background: white;
+@font-face {
+    font-family: 'Teletekst'; /*a name to be used later*/
+    src: url('../static/fonts/TeleTekst.ttf'); /*URL to font*/
 }
 
+body {
+  background: #CFCFCF;
+}
+
+/* Overall code */
 /* Header */
 
 .navigatieHeader {
-  background-color: #4CAF50;
+  background-color: #CFCFCF;
   position: fixed;
   display: flex;
   top: 0;
@@ -13,52 +19,165 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  list-style: none;
+  height: 8vh;
+  z-index: 100;
 }
 
-.navigatieHeader li {
-  list-style: none;
+.logoImg {
+  height: auto;
+  width: 3em;
+  margin: 0.5em 0 0 0.5em;
 }
 
 .navigatieHeader li button {
   height: 6vh;
   width: 10vw;
   padding: 0;
-  background-color: #4CAF50;
+  background-color: #CFCFCF;
   border: none;
-  color: white;
+  color: black;
   text-align: center;
   font-size: 3em;
 }
 
-.zoekIcon {
-  width: 6vw;
-  height: auto;
+/* Main */
+.schermachtergrond {
+  z-index: 50;
+  background: #CFCFCF;
+  height: 52vh;
+  width: 100%;
+  position: relative;
+  margin: 5vh 0 0 0;
+}
+
+.scherm {
+  z-index: 60;
+  background: white;
+  height: 50vh;
+  width: 90%;
+  position: absolute;
+  margin: 1em 0 0 3em;
+  border-radius: 2em;
+  border: 25px solid gray;
+}
+
+.scherm h1 {
+  font-family: Teletekst, monospace;
+  font-size: 3em;
+  text-align: center;
+  margin: 1em 0 0 0;
 }
 
 /* Footer */
 
 .navigatieFooter {
-  background-color: #4CAF50;
+  background-color: #CFCFCF;
   position: fixed;
-  display: flex;
   bottom: 0;
-  justify-content: space-evenly;
   width: 100%;
   margin: 0;
   padding: 0;
-}
-
-.navigatieFooter li {
+  height: 40vh;
   list-style: none;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% auto;
+  z-index: 100;
 }
 
 .navigatieFooter li button {
-  height: 6vh;
-  width: 33.33vw;
   padding: 0;
-  background-color: #4CAF50;
   border: none;
-  color: white;
+  color: black;
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
+}
+
+.navigatieFooter li:first-of-type{
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
+.BDiv {
+  height: 65%;
+  width: 67%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  margin: 2em 0 0 6em;
+}
+
+.B1 {
+  border-radius: 50%;
+  background-color: #343434;
+  height: 3.5em;
+  width: 3.5em;
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+.B2 {
+  border-radius: 50%;
+  background-color: #343434;
+  height: 3.5em;
+  width: 3.5em;
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
+.navigatieFooter li:nth-of-type(2){
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+.profielDiv {
+  height: 100%;
+  width: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+}
+
+ul li .profielButton {
+  border-radius: 1em;
+  background-color: #9B9B9B;
+  border: 2px solid #707070;
+  height: 1em;
+  width: 4.5em;
+  position: absolute;
+  grid-column-start: 1;
+  bottom: 1.8em;
+  margin: 0 0 0 2.5em;
+}
+
+.profielTekst {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 2.5em;
+  grid-column-start: 2;
+  bottom: 1em;
+  font-family: Teletekst, monospace;
+}
+
+.navigatieFooter li:nth-of-type(3){
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.joystick {
+  border-radius: 50%;
+  background-color: #FF4343;
+  height: 9em;
+  width: 9em;
+  margin: 3em 0 0 2em;
+}
+
+/* Profiel css */
+
+.profielscherm {
+  background: url('/images/background.png');
+  background-size: cover;
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="schermachtergrond">
+    <section class="scherm profielscherm">
+      <h1>
+        Je profiel<br><br>
+
+        <% spel.forEach(function(hetSpel) { %>
+            <%= hetSpel.name %> | <%= hetSpel.genre %>
+          <br>
+        <% });%>
+
+      </h1>
+    </section>
+  </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
+</script>
+
 <head>
     <%- include('../partials/head'); %>
 </head>
+
 <body>
 
 <header>
@@ -10,18 +14,21 @@
 </header>
 
 <main>
-  <section>
+  <div class="schermachtergrond">
+    <section class="scherm">
+      <h1>Welcome back Tim!</h1>
 
-    <h1>Welcome!</h1>
-      <form action="/genre" method="POST">
-        <input type="text" placeholder="name" name="name">
-        <input type="text" placeholder="genre" name="genre">
-        <button type="submit">Submit</button>
-      </form>
+      <h1>Nou, test ff of je dingen werken
+        <form action="/spel" method="POST">
+          <input type="text" placeholder="Game name" name="name">
+          <input type="text" placeholder="The Genre" name="genre"> <br>
+          <button type="submit">Submit</button>
+        </form>
+      </h1>
 
-      <%= Genre[i].name %>
+    </section>
 
-  </section>
+  </div>
 </main>
 
 <footer>
