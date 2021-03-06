@@ -4,36 +4,39 @@
 </script>
 
 <head>
-    <%- include('../partials/head'); %>
+  <%- include('../partials/head'); %>
 </head>
 
 <body>
 
-<header>
+  <header>
     <%- include('../partials/header'); %>
-</header>
+  </header>
 
-<main>
-  <div class="schermachtergrond">
-    <section class="scherm">
-      <h1>Welcome back Tim!</h1>
+  <main>
+    <div class="schermachtergrond">
+      <div class="schermRand">
+        <section class="scherm">
+          <h1>Welcome back Tim!</h1>
 
-      <h1>Nou, test ff of je dingen werken
-        <form action="/spel" method="POST">
-          <input type="text" placeholder="Game name" name="name">
-          <input type="text" placeholder="The Genre" name="genre"> <br>
-          <button type="submit">Submit</button>
-        </form>
-      </h1>
+          <h1>Nou, test ff of je dingen werken
+            <form action="/spel" method="POST">
+              <input type="text" placeholder="Game name" name="name">
+              <input type="text" placeholder="The Genre" name="genre"> <br>
+              <button type="submit">Submit</button>
+            </form>
+          </h1>
 
-    </section>
+        </section>
+      </div>
 
-  </div>
-</main>
+    </div>
+  </main>
 
-<footer>
+  <footer>
     <%- include('../partials/footer'); %>
-</footer>
+  </footer>
 
 </body>
+
 </html>

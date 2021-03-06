@@ -1,5 +1,5 @@
 # Welcome to the matching app of Tim de Roller
-I am a student at the University of Applied Sciences Amsterdam and this is my matching app for Project Tech. 
+I am a student at the University of Applied Sciences Amsterdam and this is my matching app for Project Tech.
 
 The purpose of this app is that people who play a certain game can play it together with people without all the hassle with LFG sites and discords. No more KWTD and being ignored because you don't have a certain number of clears yet.
 

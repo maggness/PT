@@ -2,34 +2,39 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head'); %>
+  <%- include('../partials/head'); %>
 </head>
 
 <body>
 
-<header>
+  <header>
     <%- include('../partials/header'); %>
-</header>
+  </header>
 
-<main>
-  <div class="schermachtergrond">
-    <section class="scherm profielscherm">
-      <h1>
-        Je profiel<br><br>
+  <main>
+    <div class="schermachtergrond">
+      <div class="schermRand">
+        <section class="scherm profielscherm">
+          <h1>
+            Je profiel<br><br>
+            <ul class="GamesList">
+              <% spel.forEach(function(hetSpel) { %>
+              <li>
+                <%= hetSpel.name %>
+                <button id="verwijderButton" data-id="<%=hetSpel._id%>">Verwijder</button> <br>
+              </li>
+              <% });%>
+            </ul>
+          </h1>
+        </section>
+      </div>
+    </div>
+  </main>
 
-        <% spel.forEach(function(hetSpel) { %>
-            <%= hetSpel.name %> | <%= hetSpel.genre %>
-          <br>
-        <% });%>
-
-      </h1>
-    </section>
-  </div>
-</main>
-
-<footer>
+  <footer>
     <%- include('../partials/footer'); %>
-</footer>
+  </footer>
 
 </body>
+
 </html>

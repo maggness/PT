@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'Teletekst'; /*a name to be used later*/
-    src: url('../static/fonts/TeleTekst.ttf'); /*URL to font*/
+  font-family: 'Teletekst';
+  /*a name to be used later*/
+  src: url('../static/fonts/TeleTekst.ttf');
+  /*URL to font*/
 }
 
 body {
@@ -9,7 +11,6 @@ body {
 
 /* Overall code */
 /* Header */
-
 .navigatieHeader {
   background-color: #CFCFCF;
   position: fixed;
@@ -39,6 +40,7 @@ body {
   color: black;
   text-align: center;
   font-size: 3em;
+  box-shadow: none;
 }
 
 /* Main */
@@ -51,7 +53,7 @@ body {
   margin: 5vh 0 0 0;
 }
 
-.scherm {
+.schermRand {
   z-index: 60;
   background: white;
   height: 50vh;
@@ -62,6 +64,14 @@ body {
   border: 25px solid gray;
 }
 
+.scherm {
+  z-index: 50;
+  background: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 .scherm h1 {
   font-family: Teletekst, monospace;
   font-size: 3em;
@@ -69,8 +79,19 @@ body {
   margin: 1em 0 0 0;
 }
 
-/* Footer */
+button {
+  box-shadow: 3px 3px 0 3px black;
+}
 
+button:focus {
+  outline: none;
+}
+
+button:active {
+  box-shadow: 0.5px 0.5px 0 0.5px black;
+}
+
+/* Footer */
 .navigatieFooter {
   background-color: #CFCFCF;
   position: fixed;
@@ -94,7 +115,7 @@ body {
   font-size: 2em;
 }
 
-.navigatieFooter li:first-of-type{
+.navigatieFooter li:first-of-type {
   grid-row-start: 2;
   grid-column-start: 1;
 }
@@ -108,13 +129,33 @@ body {
   margin: 2em 0 0 6em;
 }
 
+.BDiv a:first-of-type {
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+.BDiv a:last-of-type {
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
+.B1tekst {
+  font-family: Teletekst, monospace;
+  font-size: 2.5em;
+  margin: 0.6em 0 0 0.5em;
+}
+
 .B1 {
   border-radius: 50%;
   background-color: #343434;
   height: 3.5em;
   width: 3.5em;
-  grid-row-start: 1;
-  grid-column-start: 2;
+}
+
+.B2tekst {
+  font-family: Teletekst, monospace;
+  font-size: 2.5em;
+  margin: 0.6em 0 0 0;
 }
 
 .B2 {
@@ -122,11 +163,9 @@ body {
   background-color: #343434;
   height: 3.5em;
   width: 3.5em;
-  grid-row-start: 2;
-  grid-column-start: 1;
 }
 
-.navigatieFooter li:nth-of-type(2){
+.navigatieFooter li:nth-of-type(2) {
   grid-row-start: 1;
   grid-column-start: 2;
 }
@@ -162,7 +201,7 @@ ul li .profielButton {
   font-family: Teletekst, monospace;
 }
 
-.navigatieFooter li:nth-of-type(3){
+.navigatieFooter li:nth-of-type(3) {
   grid-row-start: 2;
   grid-column-start: 2;
 }
@@ -176,8 +215,12 @@ ul li .profielButton {
 }
 
 /* Profiel css */
-
 .profielscherm {
   background: url('/images/background.png');
   background-size: cover;
+}
+
+.GamesList {
+  list-style: none;
+  overflow: hidden;
 }
