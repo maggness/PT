@@ -14,18 +14,17 @@
   <main>
     <div class="schermachtergrond">
       <div class="schermRand">
-        <section class="scherm profielscherm">
-          <h1>
-            Je profiel<br><br>
+        <section class="scherm profielscherm" id="mainScherm">
+          <h1>Je profiel</h1>
+          <img src="/images/profielfoto2.png" alt="ProfielPicture">
             <ul class="GamesList">
               <% spel.forEach(function(hetSpel) { %>
-              <li>
-                <%= hetSpel.name %>
-                <button id="verwijderButton" data-id="<%=hetSpel._id%>">Verwijder</button> <br>
+              <li class="gameItem">
+                <p><%= hetSpel.name %></p>
+                <button id="verwijderButton" data-id="<%=hetSpel._id%>">Verwijder</button>
               </li>
               <% });%>
             </ul>
-          </h1>
         </section>
       </div>
     </div>

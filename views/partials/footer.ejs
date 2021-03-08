@@ -4,23 +4,33 @@
       <li>
         <div class="BDiv">
           <p class="B1tekst">Home</p>
-          <a href="/"><button type="button" name="home" class="B1"></button></a>
-          <p class="B2tekst">Game</p>
-          <a href="#"><button type="button" name="profiel" class="B2"></button></a>
+          <a href="/" id="B1buttonA"><button type="button" name="home" class="B1" id="B1"></button></a>
+          <p class="B2tekst">
+            <audio id="gameboySound">
+              <source src="/sounds/gameboySound.mp3" type="audio/mpeg">
+            </audio>
+          </p>
+          <a href="#"><button type="button" name="profiel" class="B2" id="B2"></button></a>
         </div>
       </li>
       <li>
         <div class="profielDiv">
-          <a href="/profiel"><button type="button" name="profiel" class="profielButton"></button></a>
+          <a href="/profiel" id="profielbuttonA"><button type="button" name="profiel" class="profielButton" id="profielButton"></button></a>
           <p class="profielTekst">Profiel</p>
         </div>
       </li>
       <li>
-        <button type="button" name="chat" class="joystick"></button>
+        <div class="joystickPijlenDiv">
+          <button type="button" name="joystickPijlOmhoog" class="joystickPijlOmhoog" id="joystickPijlOmhoog"></button>
+          <button type="button" name="joystickPijlRechts" class="joystickPijlRechts" id="joystickPijlRechts"></button>
+          <button type="button" name="joystickPijlOmlaag" class="joystickPijlOmlaag" id="joystickPijlOmlaag"></button>
+          <button type="button" name="joystickPijlLinks" class="joystickPijlLinks" id="joystickPijlLinks"></button>
+          <div class="joystick" id="joystick"></div>
+        </div>
       </li>
     </ul>
   </nav>
 
   <script src="../scripts/verwijder.js"></script>
-
+  <script src="../scripts/joystick.js"></script>
 </section>

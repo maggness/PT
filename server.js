@@ -18,14 +18,10 @@ const {
 // Main function aan roepen
 main()
 
-let hetSpel = {
-  name: "",
-  genre: ""
-}
-
 // Connectie maken met de database
 function main() {
   MongoClient
+    // Maakt de connectie met de database
     .connect(`mongodb+srv://${MONGO_USER}:${MONGO_PASS}@${MONGO_URI}/${MONGO_DB}?retryWrites=true&w=majority`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -34,8 +30,13 @@ function main() {
     // Promise, als de connectie er is voert het deze dingen uit
     .then(connection => {
 
+      let hetSpel = {
+        name: "",
+        genre: ""
+      }
+
       const db = connection.db('ProjectTech')
-      const genreCollection = db.collection('game')
+      const gameCollection = db.collection('game')
 
       // Het aanroepen van mijn gebruikte engine en dan het pad van mijn views
       app.set("view engine", "ejs")
@@ -46,50 +47,42 @@ function main() {
       app.use(express.static('static'))
 
       app.get('/', (req, res) => {
-        res.render('pages/index.ejs')
+        res.render('pages/index.ejs', {
+          spel: hetSpel
+        })
       })
 
+      // data van het form met de /spel actie in de database
       app.post('/spel', (req, res) => {
-        genreCollection.insertOne(req.body)
+        gameCollection.insertOne(req.body)
           .then(result => {
             res.redirect('/')
           })
           .catch(error => console.error(error))
       })
 
-      app.get('/', (req, res) => {
-        res.render('pages/index.ejs', {
-          spel: hetSpel
-        })
-      })
-
+      // Spullen uit de database ophalen en in profiel renderen
       app.get('/profiel', (req, res) => {
         db.collection('game').find().toArray()
           .then(results => {
             res.render('pages/profiel.ejs', {
               spel: results,
-              genre: hetSpel,
+              game: hetSpel,
             })
           })
-      })
-
-      app.get('/profiel', (req, res) => {
-        db.collection('game').find().toArray()
-          .then(results => {
-            console.log(results)
-          })
           .catch(error => console.error(error))
-        // ...
       })
 
       app.delete('/delete', (req, res) => {
-      // Maakt van de query string een officeel mongodb object id, anders verwijdert mongodb de game niet
-      db.collection('game').deleteOne({"_id":new ObjectID(req.query.id)})
-      .then((result) => {
-        console.log(result)
-        res.send('Gelukt :)')
+        // Maakt van de query string een officeel mongodb object id, anders verwijdert mongodb de game niet
+        db.collection('game').deleteOne({
+            "_id": new ObjectID(req.query.id)
+          })
+          .then((result) => {
+            console.log(result)
+            res.send('gelukt')
+          })
       })
-    })
 
       // Als er een error is laat hij een error zien
       app.use(function(req, res, next) {

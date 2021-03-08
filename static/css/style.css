@@ -7,6 +7,7 @@
 
 body {
   background: #CFCFCF;
+  padding-top: 50px;
 }
 
 /* Overall code */
@@ -70,6 +71,15 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.schermRand .konamischerm {
+  z-index: 90;
+  background: url('/images/background.gif');
+  background-size: cover;
+  font-size: 0;
 }
 
 .scherm h1 {
@@ -206,12 +216,89 @@ ul li .profielButton {
   grid-column-start: 2;
 }
 
+.joystickPijlenDiv {
+  display: grid;
+  grid-template-columns: 3em 18.5em 3em;
+  grid-template-rows: 3em 18.5em 3em;
+}
+
+.joystickPijlenDiv button {
+  background-repeat: no-repeat;
+  box-shadow: none;
+}
+
+.joystickPijlOmhoog {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  background: url(/images/pijlboven.png) 95px;
+  background-size: 35%;
+}
+
+.joystickBoven {
+  transform: translateY(-30px);
+}
+
+.joystickPijlRechts {
+  grid-row-start: 2;
+  grid-column-start: 3;
+  background: url(/images/pijlrechts.png) 9px;
+  background-size: 70%;
+}
+
+.joystickRechts {
+  transform: translateX(30px);
+}
+
+.joystickPijlOmlaag {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  background: url(/images/pijlonder.png) 95px;
+  background-size: 35%;
+}
+
+.joystickOmlaag {
+  transform: translateY(30px);
+}
+
+.joystickPijlLinks {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  background: url(/images/pijllinks.png) 9px;
+  background-size: 70%;
+}
+
+.joystickLinks {
+  transform: translateX(-30px);
+}
+
 .joystick {
   border-radius: 50%;
   background-color: #FF4343;
-  height: 9em;
-  width: 9em;
-  margin: 3em 0 0 2em;
+  height: 100%;
+  width: 100%;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  transition: 0.1s;
+}
+
+/* Index css */
+.indexscherm {
+  background: url('/images/indexBackground.png');
+  background-size: cover;
+}
+
+.welcomeTekstIndex {
+  font-family: Teletekst, monospace;
+  font-size: 3em;
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+
+.gameInvoerenForm {
+  font-family: Teletekst, monospace;
+  font-size: 3em;
+  text-align: center;
+  margin: 1em 0 0 0;
 }
 
 /* Profiel css */
@@ -220,7 +307,44 @@ ul li .profielButton {
   background-size: cover;
 }
 
+.profielscherm img {
+  width: 25%;
+  height: auto;
+  position: relative;
+  left: 37.5%;
+  border: 3px solid black;
+}
+
 .GamesList {
   list-style: none;
+  padding: 0;
+  background: #ffffff99;
+  font-family: Teletekst, monospace;
+  font-size: 3em;
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+
+.gameItem {
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 70% 25%;
+  grid-template-rows: 100%;
+  margin: 0 0 0.7em 0;
+}
+
+.gameItem p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#verwijderButton {
+  border-radius: 10%;
+  background-color: #FF4343;
+  height: 90%;
+  width: 100%;
+  font-size: 0.9em;
 }

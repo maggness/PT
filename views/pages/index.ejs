@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-</script>
-
 <head>
   <%- include('../partials/head'); %>
 </head>
@@ -16,16 +14,14 @@
   <main>
     <div class="schermachtergrond">
       <div class="schermRand">
-        <section class="scherm">
-          <h1>Welcome back Tim!</h1>
-
-          <h1>Nou, test ff of je dingen werken
-            <form action="/spel" method="POST">
-              <input type="text" placeholder="Game name" name="name">
-              <input type="text" placeholder="The Genre" name="genre"> <br>
+        <section class="scherm indexscherm" id="mainScherm">
+          <h1>Welcome back!</h1>
+          <p class="welcomeTekstIndex">Voer het spel in dat je wilt koppelen met je account</p>
+            <form action="/spel" method="POST" class="gameInvoerenForm">
+              <input type="text" placeholder="Game name" name="name" required>
+              <input type="text" placeholder="The Genre" name="genre" required> <br>
               <button type="submit">Submit</button>
             </form>
-          </h1>
 
         </section>
       </div>
