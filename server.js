@@ -4,7 +4,7 @@ const bodyParser = require("body-parser") // bodyParser zorgt ervoor dat ik data
 const path = require("path")
 const MongoClient = require('mongodb').MongoClient
 const ObjectID = require('mongodb').ObjectID
-const port = 5181
+const port = 8000
 const app = express()
 
 // Haalt de dingen uit mijn .env bestand

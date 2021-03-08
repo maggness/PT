@@ -4,8 +4,8 @@
   "description": "Project Tech Backend",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "startDev": "node server.js"
+    "start": "node server.js",
+    "startDev": "nodemon server.js"
   },
   "repository": {
     "type": "git",

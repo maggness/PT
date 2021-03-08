@@ -20,7 +20,7 @@
             <ul class="GamesList">
               <% spel.forEach(function(hetSpel) { %>
               <li class="gameItem">
-                <p><%= hetSpel.name %></p>
+                <p><%= hetSpel.name %> | <%= hetSpel.genre %></p>
                 <button id="verwijderButton" data-id="<%=hetSpel._id%>">Verwijder</button>
               </li>
               <% });%>
