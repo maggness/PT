@@ -1,7 +1,7 @@
-require("dotenv").config()
+require('dotenv').config()
 const express = require('express')
-const bodyParser = require("body-parser") // bodyParser zorgt ervoor dat ik data kan halen uit mijn body
-const path = require("path")
+const bodyParser = require('body-parser') // bodyParser zorgt ervoor dat ik data kan halen uit mijn body
+const path = require('path')
 const MongoClient = require('mongodb').MongoClient
 const ObjectID = require('mongodb').ObjectID
 const port = process.env.PORT||8000
@@ -31,16 +31,16 @@ function main() {
     .then(connection => {
 
       let hetSpel = {
-        name: "",
-        genre: ""
+        name: '',
+        genre: ''
       }
 
       const db = connection.db('ProjectTech')
       const gameCollection = db.collection('game')
 
       // Het aanroepen van mijn gebruikte engine en dan het pad van mijn views
-      app.set("view engine", "ejs")
-      app.set("views", path.join(__dirname, "views"))
+      app.set('view engine', 'ejs')
+      app.set('views', path.join(__dirname, 'views'))
       app.use(bodyParser.urlencoded({
         extended: true
       }))
@@ -76,7 +76,7 @@ function main() {
       app.delete('/delete', (req, res) => {
         // Maakt van de query string een officeel mongodb object id, anders verwijdert mongodb de game niet
         db.collection('game').deleteOne({
-            "_id": new ObjectID(req.query.id)
+            '_id': new ObjectID(req.query.id)
           })
           .then((result) => {
             console.log(result)
@@ -85,8 +85,8 @@ function main() {
       })
 
       // Als er een error is laat hij een error zien
-      app.use(function(req, res, next) {
-        res.status(404).send("Error 404")
+      app.use(function(req, res) {
+        res.status(404).send('Error 404')
       })
 
       // Als mijn server is opgestart zie ik een bericht in mijn console
