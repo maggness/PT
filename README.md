@@ -54,3 +54,7 @@ Tim de Roller // [timderoller@gmail.com](timderoller@gmail.com)
 
 # License
 [MIT License](https://github.com/maggness/PT/blob/main/LICENSE)
+
+# Resources
+
+_Connect to MongoDB. (z.d.). docs.mongodb.com. Geraadpleegd op 10 maart 2021, van https://docs.mongodb.com/guides/server/drivers/_
