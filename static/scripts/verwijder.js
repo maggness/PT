@@ -1,5 +1,6 @@
 // Selecteer alles met het id verwijderButton uit het document en voeg aan elke een EventListener toe met click en de functie verwijderGame
 document.querySelectorAll('#verwijderButton').forEach(button => button.addEventListener('click', verwijderGame))
+const gameVerwijdertTextP = document.querySelector('#gameVerwijdertText');
 
 function verwijderGame(clickevent) {
   // Hier haal je het id op en doe je het in de url, dan pas je de method DELETE toe
@@ -10,6 +11,14 @@ function verwijderGame(clickevent) {
       return response.text()
     }).then(tekst => {
       // Als de tekst gelukt is reload hij de window om te laten zien dat iets weg is
-      if (tekst === 'gelukt') window.location.reload()
+      if (tekst === 'gelukt') {
+        gameVerwijdertTextP.innerText = 'Het verwijderen is gelukt!'
+
+        setTimeout(function() {
+            window.location.reload()
+          },
+          1000
+        );
+      }
     })
 }
